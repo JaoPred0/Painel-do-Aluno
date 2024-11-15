@@ -1,0 +1,46 @@
+{% extends "baseHome.html" %}
+{% block title %}Painel do Aluno{% endblock %}
+{% block content %}
+
+<nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="/">Home</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Horário</li>
+    </ol>
+</nav>
+
+<div class="container">
+    <h2 class="text-center mb-4">Horário de Aulas</h2>
+
+    <form action="{{ url_for('horario') }}" method="POST">
+        <table class="table table-bordered text-center">
+            <thead>
+                <tr>
+                    <th>Horário</th>
+                    {% for dia in dias_da_semana %}
+                    <th>{{ dia }}</th>
+                    {% endfor %}
+                </tr>
+            </thead>
+            <tbody>
+                {% for i in range(horarios|length) %}
+                <tr>
+                    <td><strong>{{ horarios[i] }}</strong></td>
+                    {% for dia in dias_da_semana %}
+                    <td>
+                        <!-- Campos de input para cada dia e horário -->
+                        <input type="text" name="materia_{{ dia }}_{{ i }}" class="form-control"
+                            value="{{ schedule_data[dia][i] }}" placeholder="Materia">
+                    </td>
+                    {% endfor %}
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        <button type="submit" class="btn btn-primary mt-3">Salvar</button>
+    </form>
+</div>
+
+
+
+{% endblock %}

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Título da Página{% endblock %}</title>
+    <!-- Link para o CSS do Bootstrap local -->
+    <link href="{{ url_for('static', filename='css/bootstrap.min.css') }}" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/custom.css') }}">
+</head>
+
+<body class="bg-light">
+
+    <!-- Navbar -->
+    <!-- Navbar simplificada -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary w-100"
+        style="z-index: 999999999999; position: fixed; top: 0;">
+        <div class="container">
+            <a class="navbar-brand" href="/">Painel do Estudos</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/">Home</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+    <!-- Conteúdo Principal -->
+    <div class="container my-5 mt-5 mb-5">
+        <!-- Modal para Sair-->
+        <div class="modal fade mt-5" id="sair" tabindex="-1" aria-labelledby="sair" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="sair">Sair</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        Tem certeza que deseja sair da conta?
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Não</button>
+                        <a type="button" class="btn btn-primary" href="{{ url_for('logout') }}">Sim</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Offcanvas para navegação rápida -->
+        <div class="offcanvas offcanvas-start show w-25" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1"
+            id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
+
+            <div class="offcanvas-header mt-5">
+                <h5 class="offcanvas-title" id="offcanvasScrollingLabel">Navegação Rápida</h5>
+            </div>
+
+            <div class="offcanvas-body d-flex flex-column justify-content-between">
+                <!-- Lista de navegação rápida -->
+                <ul class="list-group list-group-flush">
+                    <a class="list-group-item" href="/">Home</a>
+                    <a class="list-group-item" href="/ifms">IFMS</a>
+                    <a class="list-group-item" href="/horario">Horário</a>
+                </ul>
+
+                <!-- Botão de Sair fixado ao final da offcanvas -->
+                <button type="button" class="btn btn-outline-primary mt-auto" data-bs-toggle="modal"
+                    data-bs-target="#sair">Sair</button>
+            </div>
+        </div>
+        <div class="d-flex">
+            <div class="box w-25"></div>
+            <!-- Conteúdo Principal da Página -->
+            <div class="container m-4 w-100">
+                {% block content %}
+
+                {% endblock %}
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Scripts JavaScript do Bootstrap -->
+    <script src="{{ url_for('static', filename='js/bootstrap.bundle.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/index.js') }}"></script>
+</body>
+
+</html>

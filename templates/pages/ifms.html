@@ -1,0 +1,314 @@
+{% extends "baseHome.html" %}
+{% block title %}Painel do Aluno{% endblock %}
+{% block content %}
+<nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="/">Home</a></li>
+        <li class="breadcrumb-item active" aria-current="page">IFMS</li>
+    </ol>
+</nav>
+
+<div class="mt-3">
+    <h4 class="fs-3"><i class="ri-time-line"></i> Horário</h4>
+    <div class="accordion accordion-flush" id="accordionFlushExample">
+        <!-- Horário Matutino -->
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#flush-collapseOneIFMSHorario" aria-expanded="false"
+                    aria-controls="flush-collapseOneIFMSHorario">
+                    Horário Matutino
+                </button>
+            </h2>
+            <div id="flush-collapseOneIFMSHorario" class="accordion-collapse collapse"
+                data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body">
+                    <div class="table-responsive mb-5">
+                        <table class="table table-bordered table-striped">
+                            <thead class="thead-dark">
+                                <tr>
+                                    <th>Hora</th>
+                                    <th>Segunda</th>
+                                    <th>Terça</th>
+                                    <th>Quarta</th>
+                                    <th>Quinta</th>
+                                    <th>Sexta</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>07:00 - 7:45</td>
+                                    <td>LPLB 2 (sala 04)</td>
+                                    <td>FÍSICA 2 (sala 04)</td>
+                                    <td>HISTÓRIA 4 (sala 10)</td>
+                                    <td></td>
+                                    <td>ESPANHOL TÉCNICO (sala 10)</td>
+                                </tr>
+                                <tr>
+                                    <td>07:45 - 08:30</td>
+                                    <td>LPLB 2 (sala 04)</td>
+                                    <td>FÍSICA 2 (sala 04)</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td>ESPANHOL TÉCNICO (sala 10)</td>
+                                </tr>
+                                <tr>
+                                    <td>08:30 - 09:15</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>09:35 - 10:20</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td>HISTÓRIA 4 (sala 10)</td>
+                                    <td>SOCIOLOGIA 2 (sala 04)6</td>
+                                </tr>
+                                <tr>
+                                    <td>10:20 - 11:05</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td>EMPREENDEDORISMO E INOVAÇÃO (sala 10)</td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>11:05 - 11:50</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td>EMPREENDEDORISMO E INOVAÇÃO (sala 10)</td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>11:50 - 12:35</td>
+                                    <td>FÍSICA 2 (sala 04)</td>
+                                    <td>LPLB 2 (sala 04)</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Horário Vespertino -->
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#flush-collapseTwoIFMSHorario" aria-expanded="false"
+                    aria-controls="flush-collapseTwoIFMSHorario">
+                    Horário Vespertino
+                </button>
+            </h2>
+            <div id="flush-collapseTwoIFMSHorario" class="accordion-collapse collapse"
+                data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body">
+                    <div class="table-responsive mb-5">
+                        <table class="table table-bordered table-striped">
+                            <thead class="thead-dark">
+                                <tr>
+                                    <th>Hora</th>
+                                    <th>Segunda</th>
+                                    <th>Terça</th>
+                                    <th>Quarta</th>
+                                    <th>Quinta</th>
+                                    <th>Sexta</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>13:00 - 13:45</td>
+                                    <td>Matemática 4</td>
+                                    <td>Server-side</td>
+                                    <td>Ed. Física 4</td>
+                                    <td>Biologia 2</td>
+                                    <td>Redes de Comp.</td>
+                                </tr>
+                                <tr>
+                                    <td>13:45 - 14:30</td>
+                                    <td>Matemática 4</td>
+                                    <td>Server-side</td>
+                                    <td>Ed. Física 4</td>
+                                    <td>Biologia 2</td>
+                                    <td>Redes de Comp.</td>
+                                </tr>
+                                <tr>
+                                    <td>14:30 - 15:15</td>
+                                    <td>BD 1</td>
+                                    <td>Geografia 4</td>
+                                    <td>APSW 1</td>
+                                    <td>Química 3</td>
+                                    <td>Sociologia 4</td>
+                                </tr>
+                                <tr>
+                                    <td>15:35 - 16:20</td>
+                                    <td>Sociologia 4</td>
+                                    <td>Geografia 4</td>
+                                    <td>APSW 1</td>
+                                    <td>Química 3</td>
+                                    <td>Filosofia 4</td>
+                                </tr>
+                                <tr>
+                                    <td>16:20 - 17:05</td>
+                                    <td>Física 4</td>
+                                    <td>Filosofia 4</td>
+                                    <td>Matemática 4</td>
+                                    <td>LPLB 4</td>
+                                    <td>História 2</td>
+                                </tr>
+                                <tr>
+                                    <td>17:05 - 17:50</td>
+                                    <td>Física 4</td>
+                                    <td>Química 3</td>
+                                    <td>LEM 4</td>
+                                    <td>LPLB 4</td>
+                                    <td>História 2</td>
+                                </tr>
+                                <tr>
+                                    <td>17:50 - 18:35</td>
+                                    <td>Sociologia 4</td>
+                                    <td>LEM 4</td>
+                                    <td>LPLB 4</td>
+                                    <td>Server-side</td>
+                                    <td>Física 4</td>
+                                </tr>
+                                <tr>
+                                    <td>18:35 - 19:20</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td>Server-side</td>
+                                    <td></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Horário Noturno -->
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#flush-collapseThreeIFMSHorario" aria-expanded="false"
+                    aria-controls="flush-collapseThreeIFMSHorario">
+                    Horário Noturno
+                </button>
+            </h2>
+            <div id="flush-collapseThreeIFMSHorario" class="accordion-collapse collapse"
+                data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body">
+                    <div class="table-responsive mb-5">
+                        <table class="table table-bordered table-striped">
+                            <thead class="thead-dark">
+                                <tr>
+                                    <th>Hora</th>
+                                    <th>Segunda</th>
+                                    <th>Terça</th>
+                                    <th>Quarta</th>
+                                    <th>Quinta</th>
+                                    <th>Sexta</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>19:30 - 20:15</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>20:15 - 21:20</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>21:20 - 22:30</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>22:30 - 23:00</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<hr>
+<div class="mt-3">
+    <h3>Adicionar Nota</h3>
+    <form method="POST" action="{{ url_for('add') }}">
+        <div class="mb-3">
+            <label for="titulo" class="form-label">Título</label>
+            <input type="text" class="form-control" id="titulo" name="titulo" required>
+        </div>
+        <div class="mb-3">
+            <label for="subtitulo" class="form-label">Subtítulo</label>
+            <input type="text" class="form-control" id="subtitulo" name="subtitulo">
+        </div>
+        <div class="mb-3">
+            <label for="conteudo" class="form-label">Conteúdo</label>
+            <textarea class="form-control" id="conteudo" name="conteudo" rows="3"></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Adicionar Nota</button>
+    </form>
+</div>
+<hr>
+
+<div class="row">
+    <div class="col-md-6">
+        <h2>Não Concluídas</h2>
+        {% for nota in nao_concluidas %}
+        <div class="card my-2">
+            <div class="card-body">
+                <h5 class="card-title">{{ nota.titulo }}</h5>
+                <h6 class="card-subtitle text-muted">{{ nota.subtitulo }}</h6>
+                <p class="card-text">{{ nota.conteudo }}</p>
+                <a href="{{ url_for('toggle', nota_id=nota.id) }}" class="btn btn-success btn-sm">Marcar como
+                    Concluído</a>
+                <a href="{{ url_for('delete', nota_id=nota.id) }}" class="btn btn-danger btn-sm">Excluir</a>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+    <div class="col-md-6">
+        <h2>Concluídas</h2>
+        {% for nota in concluidas %}
+        <div class="card my-2">
+            <div class="card-body">
+                <h5 class="card-title">{{ nota.titulo }}</h5>
+                <h6 class="card-subtitle text-muted">{{ nota.subtitulo }}</h6>
+                <p class="card-text">{{ nota.conteudo }}</p>
+                <a href="{{ url_for('toggle', nota_id=nota.id) }}" class="btn btn-warning btn-sm">Marcar como Não
+                    Concluído</a>
+                <a href="{{ url_for('delete', nota_id=nota.id) }}" class="btn btn-danger btn-sm">Excluir</a>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}

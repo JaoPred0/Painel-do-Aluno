@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Título da Página{% endblock %}</title>
+    <!-- Link para o CSS do Bootstrap local -->
+    <link href="{{ url_for('static', filename='css/bootstrap.min.css') }}" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/custom.css') }}">
+</head>
+
+<body class="bg-light">
+
+    <!-- Navbar -->
+    <!-- Navbar simplificada -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary" style="z-index: 999999999999;">
+        <div class="container">
+            <a class="navbar-brand" href="/">Painel do Estudos</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <div class="ms-auto">
+                    
+                </div>
+            </div>
+        </div>
+    </nav>
+
+
+    <!-- Conteúdo Principal -->
+    <div class="container my-5 mt-5 mb-5">
+        {% block content %}
+        {% endblock %}
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-primary text-light text-center py-3 mt-5 w-100"
+        style="position: absolute; bottom: 0; z-index: 9999999999;">
+        <div class="container">
+            <p class="mb-0">© 2024 Painel do Estudos - Todos os Direitos Reservados</p>
+        </div>
+    </footer>
+
+    <!-- Scripts JavaScript do Bootstrap -->
+    <script src="{{ url_for('static', filename='js/bootstrap.bundle.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/index.js') }}"></script>
+</body>
+
+</html>
